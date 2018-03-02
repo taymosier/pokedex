@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Pokemon from '../Pokemon';
 import PokeList from './PokeList';
 import DetailView from './DetailView';
+import {Grid, Row, Col } from 'react-bootstrap';
 import './styles/App.css';
 
 class App extends Component {
@@ -27,10 +28,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <PokeList handleOnClick={this.handleOnClick}/>
-        <DetailView pokemon={this.state.pokemon}/>
-      </div>
+      <Grid fluid className="App">
+        <Row className="show-grid">
+          <Col  className="pokeListCol col-lg-offset-1" lg={6} >
+            <PokeList handleOnClick={this.handleOnClick}/>
+          </Col>
+          <Col lg={4}>
+            <DetailView pokemon={this.state.pokemon}/>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

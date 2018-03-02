@@ -1,12 +1,24 @@
 .App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 650px;
-  height: 400px;
-  padding-left: 10px;
-  margin: 50px;
-  background-color: #FE0065;
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;
+  background-color: #DC0A2D;
   border-radius: 10px;
+  padding: 10vh 0 0 0;
   box-shadow: 0 14px 45px rgba( 0, 0, 0, 0.22), 0 18px 45px rgba(0,0,0,0.22);
+}
+
+.detailCol {
+  height: 80vh;
+}
+
+.pokeList {
+  height: 80vh;
+  overflow-y: hidden;
+}
+
+.pokeListCol {
+  text-align: center;
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
