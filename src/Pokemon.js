@@ -7,10 +7,10 @@ class Pokemon {
     try {
       this.baseHealth = data.stats[5].base_stat;
       this.baseSpeed = data.stats[0].base_stat;
-      this.baseAttack = data.stats[1].base_stat;
-      this.baseDefense = data.stats[2].base_stat;
-      this.baseSpecialAttack = data.stats[3].base_stat;
-      this.baseSpecialDefense = data.stats[4].base_stat;
+      this.baseAttack = data.stats[4].base_stat;
+      this.baseDefense = data.stats[3].base_stat;
+      this.baseSpecialAttack = data.stats[2].base_stat;
+      this.baseSpecialDefense = data.stats[1].base_stat;
     } catch(err){
       console.log('try again');
     } finally {
