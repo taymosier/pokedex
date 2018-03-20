@@ -9,14 +9,18 @@ export function getScreenWidth(){
   return document.getElementsByTagName('body')[0].clientWidth;
 }
 
-export const width = getScreenWidth();
+export let width = getScreenWidth();
+
+window.addEventListener("resize", function(){
+  width = getScreenWidth();
+  console.log(`width: ${width}`);
+});
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       pokemon: {},
-      width: getScreenWidth(),
     };
     this.handleOnClick = this.handleOnClick.bind(this);
     this.handleCloseButtonClick = this.handleCloseButtonClick.bind(this);
@@ -42,11 +46,13 @@ class App extends Component {
   }
 
   render() {
+
+
     console.log(this.state.width);
     console.log(this.state.pokemon);
     return (
       <Grid fluid className="App">
-        {this.state.width >= 768
+        {width >= 768
           ?   <Row className="show-grid">
                 <Col  className="pokeListCol col-lg-offset-1 " lg={6} md={4} sm={6}>
                   <PokeList handleOnClick={this.handleOnClick}/>
