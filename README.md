@@ -1,4 +1,4 @@
-Pokedex created by following the tutorial found here: https://blog.cloudboost.io/lets-build-a-pokedex-with-react-part-1-e1ba0b9387a7
+Pokedex created using the following tutorial as a starting point: https://blog.cloudboost.io/lets-build-a-pokedex-with-react-part-1-e1ba0b9387a7
 
 TODO:
 

@@ -22,3 +22,12 @@
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+.hide {
+  display: none;
+}
+
+.closePanel {
+  margin: 1vh 0 0 0;
+  color: black;
+}
