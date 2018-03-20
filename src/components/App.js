@@ -5,10 +5,11 @@ import DetailView from './DetailView.jsx';
 import {Grid, Row, Col } from 'react-bootstrap';
 import './styles/App.css';
 
-function getScreenWidth(){
+export function getScreenWidth(){
   return document.getElementsByTagName('body')[0].clientWidth;
 }
 
+export const width = getScreenWidth();
 
 class App extends Component {
   constructor() {
@@ -47,10 +48,10 @@ class App extends Component {
       <Grid fluid className="App">
         {this.state.width >= 768
           ?   <Row className="show-grid">
-                <Col  className="pokeListCol col-lg-offset-1 " lg={6} md={6} sm={8}>
+                <Col  className="pokeListCol col-lg-offset-1 " lg={6} md={4} sm={6}>
                   <PokeList handleOnClick={this.handleOnClick}/>
                 </Col>
-                <Col lg={4} md={4} sm={12}>
+                <Col lg={4} md={8} sm={6}>
                   <DetailView pokemon={this.state.pokemon} />
                 </Col>
               </Row>
